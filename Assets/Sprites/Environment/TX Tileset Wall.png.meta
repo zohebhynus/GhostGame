@@ -1,85 +1,37 @@
 fileFormatVersion: 2
-guid: 3b8513f867aee1d4f8975b3f102eb766
+guid: e62ba1f357c5d2c44b6ca37ec1d20165
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4723107735738678597
-    second: Idle_0
+      213: -1733087341866461178
+    second: TX Tileset Wall_0
   - first:
-      213: -7385789195546760866
-    second: Idle_1
+      213: 6957734447361721616
+    second: TX Tileset Wall_1
   - first:
-      213: 3234629978573100161
-    second: Idle_2
+      213: 6591716156378716260
+    second: TX Tileset Wall_2
   - first:
-      213: 6373048116405451881
-    second: Idle_3
+      213: 2165944517536112100
+    second: TX Tileset Wall_3
   - first:
-      213: 7264182050183361747
-    second: Idle_4
+      213: 6429608448122266744
+    second: TX Tileset Wall_4
   - first:
-      213: -2834552850196481573
-    second: Idle_5
+      213: -8038740358467470550
+    second: TX Tileset Wall_5
   - first:
-      213: 3278449094680734212
-    second: Idle_6
+      213: -5334644376926737371
+    second: TX Tileset Wall_6
   - first:
-      213: 3384493420599841878
-    second: Idle_7
+      213: -5954229690154693420
+    second: TX Tileset Wall_7
   - first:
-      213: -2331352242086191015
-    second: Idle_8
+      213: -522149132528552129
+    second: TX Tileset Wall_8
   - first:
-      213: -3914248031228685145
-    second: Idle_9
-  - first:
-      213: 7132915409514813599
-    second: Idle_10
-  - first:
-      213: -2055793278435719954
-    second: Idle_11
-  - first:
-      213: -1133706752296058015
-    second: Idle_12
-  - first:
-      213: -7873313509577613512
-    second: Idle_13
-  - first:
-      213: 719741960001666856
-    second: Idle_14
-  - first:
-      213: -2017107389029466533
-    second: Idle_15
-  - first:
-      213: -7851968663669621680
-    second: Idle_16
-  - first:
-      213: -216799431487514718
-    second: Idle_17
-  - first:
-      213: 3610992343889596186
-    second: Idle_18
-  - first:
-      213: 6538181465538999060
-    second: Idle_19
-  - first:
-      213: 6239617922696411994
-    second: Idle_20
-  - first:
-      213: 3604202040009161566
-    second: Idle_21
-  - first:
-      213: 7714808819881066536
-    second: Idle_22
-  - first:
-      213: 4839914909742284145
-    second: Idle_23
-  - first:
-      213: 5540120679197756244
-    second: Idle_24
-  - first:
-      213: 3244912566212535839
-    second: Idle_25
+      213: 6981085378657702106
+    second: TX Tileset Wall_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -175,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: TX Tileset Wall_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
+        x: 31
+        y: 351
+        width: 98
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d7a982679db8140800000000000000
-      internalID: 4723107735738678597
+      spriteID: 608d25fae36d2f7e0800000000000000
+      internalID: -1733087341866461178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: TX Tileset Wall_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 151
+        y: 375
+        width: 116
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e596485bbd7608990800000000000000
-      internalID: -7385789195546760866
+      spriteID: 0158e70cd96de8060800000000000000
+      internalID: 6957734447361721616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: TX Tileset Wall_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 287
+        y: 383
+        width: 12
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 184dda4e3d6b3ec20800000000000000
-      internalID: 3234629978573100161
+      spriteID: 46818297bea7a7b50800000000000000
+      internalID: 6591716156378716260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: TX Tileset Wall_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 343
+        y: 383
+        width: 10
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96cb1dafe7d917850800000000000000
-      internalID: 6373048116405451881
+      spriteID: 4edd1f2201bfe0e10800000000000000
+      internalID: 2165944517536112100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: TX Tileset Wall_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 383
+        y: 471
+        width: 98
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d4b2fc561f8fc460800000000000000
-      internalID: 7264182050183361747
+      spriteID: 874ad2b61de8a3950800000000000000
+      internalID: 6429608448122266744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_5
+      name: TX Tileset Wall_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 383
+        y: 351
+        width: 66
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd9b7fa6335a9a8d0800000000000000
-      internalID: -2834552850196481573
+      spriteID: a2b33fb2c38a07090800000000000000
+      internalID: -8038740358467470550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_6
+      name: TX Tileset Wall_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 31
+        y: 255
+        width: 130
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +274,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40a65a6e4146f7d20800000000000000
-      internalID: 3278449094680734212
+      spriteID: 52c2f3e043987f5b0800000000000000
+      internalID: -5334644376926737371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_7
+      name: TX Tileset Wall_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 191
+        y: 255
+        width: 34
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +296,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 654108f85d228fe20800000000000000
-      internalID: 3384493420599841878
+      spriteID: 4dcce37c4a35e5da0800000000000000
+      internalID: -5954229690154693420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_8
+      name: TX Tileset Wall_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 31
+        y: 159
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9506424ec7f55afd0800000000000000
-      internalID: -2331352242086191015
+      spriteID: f377bd36124f0c8f0800000000000000
+      internalID: -522149132528552129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_9
+      name: TX Tileset Wall_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 127
+        y: 159
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,52 +340,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a497d7772ccda9c0800000000000000
-      internalID: -3914248031228685145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f985a0de5c43df260800000000000000
-      internalID: 7132915409514813599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee40433c7ea5873e0800000000000000
-      internalID: -2055793278435719954
+      spriteID: ad0d09d1a2cc1e060800000000000000
+      internalID: 6981085378657702106
       vertices: []
       indices: 
       edges: []
@@ -442,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 308cb7a848651614a8fbbfdab44f308d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -452,18 +360,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_0: 4723107735738678597
-      Idle_1: -7385789195546760866
-      Idle_10: 7132915409514813599
-      Idle_11: -2055793278435719954
-      Idle_2: 3234629978573100161
-      Idle_3: 6373048116405451881
-      Idle_4: 7264182050183361747
-      Idle_5: -2834552850196481573
-      Idle_6: 3278449094680734212
-      Idle_7: 3384493420599841878
-      Idle_8: -2331352242086191015
-      Idle_9: -3914248031228685145
+      TX Tileset Wall_0: -1733087341866461178
+      TX Tileset Wall_1: 6957734447361721616
+      TX Tileset Wall_2: 6591716156378716260
+      TX Tileset Wall_3: 2165944517536112100
+      TX Tileset Wall_4: 6429608448122266744
+      TX Tileset Wall_5: -8038740358467470550
+      TX Tileset Wall_6: -5334644376926737371
+      TX Tileset Wall_7: -5954229690154693420
+      TX Tileset Wall_8: -522149132528552129
+      TX Tileset Wall_9: 6981085378657702106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
