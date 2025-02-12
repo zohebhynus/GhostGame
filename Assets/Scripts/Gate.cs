@@ -4,6 +4,7 @@ using UnityEngine;
 public class Gate : MonoBehaviour
 {
     public PlayerController player;
+    public GameObject winGate;
 
     BoxCollider2D cd;
     Transform spriteHolder;
@@ -58,6 +59,7 @@ public class Gate : MonoBehaviour
     {
         cd.enabled = false;
         locked = false;
+        winGate.SetActive(true);
         shakeDuration = 0.5f;
         audioSource.PlayOneShot(gateSound);
 
@@ -75,14 +77,15 @@ public class Gate : MonoBehaviour
     {
         cd.enabled = true;
         locked = true;
-        shakeDuration = 0.5f;
-        
+        winGate.SetActive(false);
+
+
         while (spriteHolder.localScale.y < closedScale)
         {
             spriteHolder.localScale = Vector3.MoveTowards(spriteHolder.localScale, new Vector3(spriteHolder.localScale.x, closedScale, spriteHolder.localScale.z), Time.deltaTime * gateSpeed);
             yield return null;
         }
-
+        shakeDuration = 0.5f;
         audioSource.PlayOneShot(gateSound);
         spriteHolder.localScale = new Vector3(spriteHolder.localScale.x, closedScale, spriteHolder.localScale.z);
     }
