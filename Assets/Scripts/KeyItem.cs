@@ -11,11 +11,13 @@ public class KeyItem : MonoBehaviour
 
     private Transform spriteHolder;
 
+
     private void Start()
     {
 
         timeCounter = Random.Range(0, Mathf.PI * 2);
         spriteHolder = transform.Find("SpriteHolder");
+
         startPos = spriteHolder.position;
     }
 
@@ -34,6 +36,7 @@ public class KeyItem : MonoBehaviour
 
     public void PickUpItem(PlayerController controller)
     {
+        controller.PlayPickUpAudio();
         controller.keysCollected++;
 
         Destroy(gameObject);

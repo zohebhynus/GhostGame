@@ -5,8 +5,9 @@ public class Gate : MonoBehaviour
 {
     public PlayerController player;
 
-    Collider2D collider2d;
+    BoxCollider2D cd;
     Transform spriteHolder;
+    AudioSource audioSource;
 
     float closedScale = 1.5f;
     float openScale = 0.2f;
@@ -15,11 +16,20 @@ public class Gate : MonoBehaviour
     int unlockNum = 3;
 
     public bool locked = true;
+    public AudioClip gateSound;
+
+    Camera cam;
+    Vector3 originalCamPos;
+    float shakeDuration = 0.0f;
+    float shakeMagnitude = 0.05f;
 
     void Start()
     {
-        collider2d = GetComponent<Collider2D>();
+        cd = GetComponent<BoxCollider2D>();
         spriteHolder = transform.Find("SpriteHolder");
+        audioSource = GetComponent<AudioSource>();
+        cam = Camera.main;
+        originalCamPos = cam.transform.position;
 
         StartCoroutine(CloseGate());
     }
@@ -31,12 +41,25 @@ public class Gate : MonoBehaviour
         {
             StartCoroutine(OpenGate());
         }
+
+        if(shakeDuration > 0.0f) 
+        {
+            cam.transform.position = originalCamPos + (Vector3)Random.insideUnitCircle * shakeMagnitude;
+            shakeDuration -= Time.deltaTime;
+        }
+        else
+        {
+            shakeDuration = 0.0f;
+            cam.transform.position = originalCamPos;
+        }
     }
 
     IEnumerator OpenGate()
     {
-        collider2d.enabled = false;
+        cd.enabled = false;
         locked = false;
+        shakeDuration = 0.5f;
+        audioSource.PlayOneShot(gateSound);
 
         while (spriteHolder.localScale.y > openScale)
         {
@@ -50,15 +73,17 @@ public class Gate : MonoBehaviour
 
     IEnumerator CloseGate()
     {
-        collider2d.enabled = true;
+        cd.enabled = true;
         locked = true;
-
+        shakeDuration = 0.5f;
+        
         while (spriteHolder.localScale.y < closedScale)
         {
             spriteHolder.localScale = Vector3.MoveTowards(spriteHolder.localScale, new Vector3(spriteHolder.localScale.x, closedScale, spriteHolder.localScale.z), Time.deltaTime * gateSpeed);
             yield return null;
         }
 
+        audioSource.PlayOneShot(gateSound);
         spriteHolder.localScale = new Vector3(spriteHolder.localScale.x, closedScale, spriteHolder.localScale.z);
     }
 }
