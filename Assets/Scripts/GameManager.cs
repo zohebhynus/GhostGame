@@ -15,6 +15,15 @@ public class GameManager : MonoBehaviour
     private float ghostMessagePanelInitialAlpha;
     private float ghostMessageTextInitialAlpha;
 
+
+    public Image onScreenPickUpButtonImage;
+    private TMP_Text onScreenPickUpButtonText;
+    private float onScreenPickUpButtonImageInitialAlpha;
+    private float onScreenPickUpButtonTextInitialAlpha;
+
+    public GameObject onScreenControls;
+
+
     private bool startFade = true;
     private float fadeDuration = 4.0f;
     private float fadeTimer = 0.0f;
@@ -23,6 +32,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+#if !UNITY_ANDROID
+        onScreenControls.SetActive(false);
+#endif
+
         keyMessageText = keyMessagePanel.GetComponentInChildren<TMP_Text>();
         ghostMessageText = ghostMessagePanel.GetComponentInChildren<TMP_Text>();
 
@@ -31,6 +44,10 @@ public class GameManager : MonoBehaviour
 
         ghostMessagePanelInitialAlpha = ghostMessagePanel.color.a;
         ghostMessageTextInitialAlpha = ghostMessageText.color.a;
+
+        onScreenPickUpButtonText = onScreenPickUpButtonImage.GetComponentInChildren<TMP_Text>();
+        onScreenPickUpButtonImageInitialAlpha = onScreenPickUpButtonImage.color.a;
+        onScreenPickUpButtonTextInitialAlpha = onScreenPickUpButtonText.color.a;
     }
 
     void Update()
@@ -57,6 +74,12 @@ public class GameManager : MonoBehaviour
 
                 newAlpha = Mathf.Lerp(keyMessageTextInitialAlpha, 0.0f, fadeRatioFirst);
                 keyMessageText.color = new Color(keyMessageText.color.r, keyMessageText.color.g, keyMessageText.color.b, newAlpha);
+
+                newAlpha = Mathf.Lerp(onScreenPickUpButtonImageInitialAlpha, 0.0f, fadeRatioFirst);
+                onScreenPickUpButtonImage.color = new Color(onScreenPickUpButtonImage.color.r, onScreenPickUpButtonImage.color.g, onScreenPickUpButtonImage.color.b, newAlpha);
+
+                newAlpha = Mathf.Lerp(onScreenPickUpButtonTextInitialAlpha, 0.0f, fadeRatioFirst);
+                onScreenPickUpButtonText.color = new Color(onScreenPickUpButtonText.color.r, onScreenPickUpButtonText.color.g, onScreenPickUpButtonText.color.b, newAlpha);
             }
 
 

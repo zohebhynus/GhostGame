@@ -7,7 +7,8 @@ public class InputManager : MonoBehaviour
     EventSystem eventSystem;
     public GameObject lastSelectedMenuOption;
 
-    private bool isUsingMouse = true;
+    private bool isUsingMouse = false;
+    private bool isUsingKeyboard = false;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class InputManager : MonoBehaviour
             if (!isUsingMouse)
             {
                 isUsingMouse = true;
+                isUsingKeyboard = false;
                 eventSystem.SetSelectedGameObject(null);
             }
         }
@@ -29,8 +31,9 @@ public class InputManager : MonoBehaviour
         if (Keyboard.current.anyKey.wasPressedThisFrame ||
             Gamepad.current != null && Gamepad.current.dpad.ReadValue() != Vector2.zero)
         {
-            if (isUsingMouse)
+            if (!isUsingKeyboard)
             {
+                isUsingKeyboard = true;
                 isUsingMouse = false;
                 // Re-select the last navigated button
                 eventSystem.SetSelectedGameObject(lastSelectedMenuOption);
