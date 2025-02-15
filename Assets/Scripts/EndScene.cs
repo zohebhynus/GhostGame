@@ -12,19 +12,14 @@ public class EndScene : MonoBehaviour
 
     void Start()
     {
+        string playerStatusAndGroup = (GlobalValues.group == GhostBehaviorTestGroups.FOLLOW) ? "FollowBehaviorGroup_" : "DirectionalBehaviorGroup_"; ;
         if (GlobalValues.playerIsAlive)
         {
             winText.SetActive(true);
             loseText.SetActive(false);
             loseProp.SetActive(false);
 
-            PlayerStatus status = new PlayerStatus
-            {
-                status = "Alive"
-            };
-
-            AnalyticsService.Instance.RecordEvent(status);
-            AnalyticsService.Instance.Flush();
+            playerStatusAndGroup += "Escaped";
         }
         else
         {
@@ -32,14 +27,11 @@ public class EndScene : MonoBehaviour
             loseText.SetActive(true);
             loseProp.SetActive(true);
 
-            PlayerStatus status = new PlayerStatus
-            {
-                status = "Dead"
-            };
-
-            AnalyticsService.Instance.RecordEvent(status);
-            AnalyticsService.Instance.Flush();
+            playerStatusAndGroup += "DidNotEscape";
         }
+
+        AnalyticsService.Instance.RecordEvent(playerStatusAndGroup);
+        AnalyticsService.Instance.Flush();
     }
 
     public void BackToMainMenu()

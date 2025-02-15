@@ -35,7 +35,7 @@ public class GhostBehavior : MonoBehaviour
         cd = GetComponent<BoxCollider2D>();
         animator = GetComponentInChildren<Animator>();
 
-        if (GlobalValues.group == TestGroup.GROUPA)
+        if (GlobalValues.group == GhostBehaviorTestGroups.FOLLOW)
         {
             transform.position = settingsGroupA.startPosition;
         }
@@ -49,7 +49,7 @@ public class GhostBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GlobalValues.group == TestGroup.GROUPA)
+        if (GlobalValues.group == GhostBehaviorTestGroups.FOLLOW)
         {
             GhostLogicFollow();
         }
@@ -96,5 +96,7 @@ public class GhostBehavior : MonoBehaviour
             currentDirection.y *= -1;
         }
         currentDirection.Normalize();
+        animator.SetFloat("LookX", currentDirection.x);
+        animator.SetFloat("LookY", currentDirection.y);
     }
 }
